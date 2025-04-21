@@ -51,6 +51,6 @@ vercel env add WEBHOOK_SECRET_TOKEN
 
 # Deploy to Vercel
 echo "Deploying to Vercel..."
-vercel deploy --prod --team team_CPl7jZawsnSFC5RzPUoT1KhK
+vercel deploy --prod
 
 echo "Deployment completed!"
