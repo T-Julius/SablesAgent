@@ -22,6 +22,5 @@
       "src": "/(.*)",
       "dest": "/build/$1"
     }
-  ],
-  "teamId": "team_CPl7jZawsnSFC5RzPUoT1KhK"
+  ]
 }
