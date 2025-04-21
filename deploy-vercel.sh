@@ -49,8 +49,38 @@ vercel env add ELASTIC_INDEX
 vercel env add TOKEN_ENCRYPTION_KEY
 vercel env add WEBHOOK_SECRET_TOKEN
 
+#!/bin/bash
+
+# Vercel deployment script for Zimbabwe Sables Rugby Team document management system
+# This script prepares and deploys the application to Vercel
+
+# Check if Vercel CLI is installed
+if ! command -v vercel &> /dev/null; then
+    echo "Vercel CLI not found. Installing..."
+    npm install -g vercel
+fi
+
+# Prepare the project for deployment
+echo "Preparing project for deployment..."
+
+# Create necessary directories if they don't exist
+mkdir -p public src/contexts backend
+
+# Copy updated configuration files
+echo "Copying updated configuration files..."
+
+# Install dependencies
+echo "Installing dependencies..."
+npm install dotenv cors
+
+# Build the application
+echo "Building application..."
+npm run build
+
 # Deploy to Vercel
 echo "Deploying to Vercel..."
 vercel deploy --prod
+
+echo "Deployment completed!"
 
 echo "Deployment completed!"
